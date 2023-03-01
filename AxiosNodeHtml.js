@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //Serve static files 
-app.use(express.static(_dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get("/", async (req, res) => {
     try {
@@ -85,5 +85,5 @@ app.get("/delete/:id", async (req, res) => {
 });
 
 app.listen(5500, () => {
-    console.log('Server started on port 3000');
+    console.log('Server started on port 5500');
 });
